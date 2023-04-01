@@ -11,7 +11,7 @@ A command-line tool written in Go for updating DNS records using the iwantmyname
 
 1. Clone the repository:
 
-`git clone https://github.com/yourusername/iwantmyname-ddns.git`
+`git clone https://github.com/smallandmodern/iwantmyname-ddns.git`
 
 2. Change to the project directory:
 
