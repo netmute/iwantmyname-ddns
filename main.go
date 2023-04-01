@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -16,8 +15,11 @@ const (
 func main() {
 	username := os.Getenv("IWANTMYNAME_USERNAME")
 	password := os.Getenv("IWANTMYNAME_PASSWORD")
-  fmt.Println(username)
-  fmt.Println(password)
+
+	if username == "" || password == "" {
+		fmt.Println("username or password not set in environment variables")
+		os.Exit(1)
+	}
 
 	if len(os.Args) < 4 {
 		fmt.Println("Usage: iwantmyname hostname recordType value [ttl]")
@@ -45,10 +47,6 @@ func main() {
 }
 
 func updateRecord(username, password, hostname, recordType, value, ttl string) error {
-	if username == "" || password == "" {
-		return errors.New("username or password not set in environment variables")
-	}
-
 	client := &http.Client{}
 	req, err := http.NewRequest("POST", baseURL, nil)
 	if err != nil {
