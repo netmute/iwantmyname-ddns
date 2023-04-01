@@ -29,21 +29,17 @@ Set the environment variables `IWANTMYNAME_USERNAME` and `IWANTMYNAME_PASSWORD` 
 
 For Bash or Zsh:
 
-```
-export IWANTMYNAME_USERNAME="your_username"
-export IWANTMYNAME_PASSWORD="your_password"
-```
+`export IWANTMYNAME_USERNAME="your_username"`
+`export IWANTMYNAME_PASSWORD="your_password"`
 
 For Fish shell:
 
-```
-set -x IWANTMYNAME_USERNAME your_username
-set -x IWANTMYNAME_PASSWORD your_password
-```
+`set -x IWANTMYNAME_USERNAME your_username`
+`set -x IWANTMYNAME_PASSWORD your_password`
 
 Run the `iwantmyname` executable with the required arguments:
 
-./iwantmyname hostname recordType value [ttl]
+`./iwantmyname hostname recordType value [ttl]`
 
 Replace `hostname`, `recordType`, `value`, and `ttl` (optional) with the appropriate values for your use case.
 
